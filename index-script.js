@@ -9,7 +9,7 @@ function get(){
     document.getElementById("error").style.display = "none";
     
     setTimeout(()=>{
-        axios.get("https://cv-v3.vercel.app/api/get")
+        axios.get("https://cv-v3-api.vercel.app/api/get")
         .then(res => {
             myData = res.data;
             setMyInformation(myData.user);
@@ -40,7 +40,7 @@ function get(){
 }
 
 function save(){
-    axios.post("https://cv-v3.vercel.app/api/set", myData)
+    axios.post("https://cv-v3-api.vercel.app/api/set", myData)
     .then(res => {
         get();
     })
